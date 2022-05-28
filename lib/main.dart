@@ -21,7 +21,7 @@ class yapp extends StatelessWidget {
         routes : {
           "/":(context)=>LoginPage(),
           "/home":(context) => HomePage(),
-          //"/login":(context) => LoginPage()
+          "/login":(context) => LoginPage()
        },
     );
 }
