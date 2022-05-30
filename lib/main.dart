@@ -1,6 +1,7 @@
 
 import "package:flutter/material.dart";
 import 'package:flutter_myapp/pages/Login_page.dart';
+import 'package:flutter_myapp/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
 void main()
@@ -19,13 +20,15 @@ class yapp extends StatelessWidget {
          fontFamily: GoogleFonts.lato().fontFamily,
       //primaryTextTheme: GoogleFonts.latoTextTheme()
       ),
+      debugShowCheckedModeBanner: false,
          darkTheme: ThemeData(
          brightness: Brightness.dark,
          ),
-        // initialRoute:"/home",
+        initialRoute:"/",
         routes : {
           "/":(context)=>LoginPage(),
-          "/home":(context) => HomePage(),
+          MyRoutes.homeRoute:(context) => HomePage(),
+          MyRoutes.loginRoute:(context) => LoginPage(),
        },
     );
 }

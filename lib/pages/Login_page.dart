@@ -4,6 +4,8 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
+
+import '../utils/routes.dart';
 class LoginPage extends StatelessWidget {
 
 
@@ -12,10 +14,12 @@ class LoginPage extends StatelessWidget {
   
     return Material(
       color: Colors.white,
+      child:SingleChildScrollView(
       child:Column(
       children:[
         Image.asset("assets/images/login_image.png",
         fit:BoxFit.cover,
+        height: 300,
             ),
        SizedBox( 
          height:57,
@@ -48,21 +52,22 @@ fontWeight: FontWeight.bold,
           ),
        ),
         SizedBox( 
-         height:30,
+         height:40,
        ),
        ElevatedButton(
          child: Text("login"),
-         style:TextButton.styleFrom(),
+         style:TextButton.styleFrom(minimumSize: Size(140, 40)),
          onPressed: ( ) {
-           print("login sucessfull");
-         },
+        Navigator.pushNamed(context, MyRoutes.homeRoute) ;  
+           },
            
-         )
-         ],
-       ),
-       ),
+           )
+           ],
+          ),
+        ),
         ],
        ) 
-     );
+     ),
+    );
   }
 }
