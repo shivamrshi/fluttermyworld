@@ -14,7 +14,23 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
    String name=" ";
    bool changeButton = false;// false=0, true =1
- 
+ final _formKey= GlobalKey<FormState>();
+   moveToHome(BuildContext context) async {
+     if( _formKey.currentState!.Notvalidate()){
+           setState(() {
+             changeButton= true;
+           });
+
+           await Future.delayed (Duration(seconds: 1));
+           await Navigator.pushNamed(
+             context, MyRoutes.homeRoute);
+           //Navigator.pushNamed(context, MyRoutes.homeRoute) ;
+           setState(() {
+             changeButton= false;
+           });
+     }
+   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +38,9 @@ class _LoginPageState extends State<LoginPage> {
     return Material(
       color: Colors.white,
       child:SingleChildScrollView(
+        child: Form(
+       key:_formKey,
+
       child:Column(
       children:[
         Image.asset("assets/images/login_image.png",
@@ -50,6 +69,14 @@ fontWeight: FontWeight.bold,
            hintText:"Enter username",
            labelText: "username",
           ),
+         validator:(value){
+           if (value!.isNotEmpty) {
+             return "username name can not be empty";
+           }
+           return null;
+         },
+
+
           onChanged: (Value)
           {name= Value;
           setState(() {
@@ -63,6 +90,17 @@ fontWeight: FontWeight.bold,
            hintText:"Enter passward",
            labelText: "passward",
           ),
+           validator:(value){
+           if (value!.isNotEmpty) {
+             return "passwrd can not be empty";
+           } 
+          else if (value.length<6){
+          return"passward length should be atleast 6";
+          }
+           
+           
+           return null;
+         },
        ),
         SizedBox( 
          height:40,
@@ -71,14 +109,22 @@ fontWeight: FontWeight.bold,
           color:Colors.deepPurple,
            borderRadius: BorderRadius.circular(changeButton ?50:8),
            child:InkWell(
-         onTap: () async {
-           setState(() {
+         onTap: () => moveToHome(context),
+         
+         
+         /* async {
+          setState(() {
              changeButton= true;
            });
 
            await Future.delayed (Duration(seconds: 1));
-           Navigator.pushNamed(context, MyRoutes.homeRoute) ;
-         },
+           await Navigator.pushNamed(
+             context, MyRoutes.homeRoute);
+           //Navigator.pushNamed(context, MyRoutes.homeRoute) ;
+           setState(() {
+             changeButton= false;
+           });
+         },*/
        
        child: AnimatedContainer(
          duration: Duration(seconds:1),
@@ -120,6 +166,7 @@ fontWeight: FontWeight.bold,
         ),
         ],
        ) 
+        )
      ),
     );
   }
