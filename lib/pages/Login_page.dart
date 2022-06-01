@@ -16,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
    bool changeButton = false;// false=0, true =1
  final _formKey= GlobalKey<FormState>();
    moveToHome(BuildContext context) async {
-     if( _formKey.currentState!.Notvalidate()){
+     if( _formKey.currentState!.validate()){
            setState(() {
              changeButton= true;
            });
@@ -70,7 +70,7 @@ fontWeight: FontWeight.bold,
            labelText: "username",
           ),
          validator:(value){
-           if (value!.isNotEmpty) {
+           if (value!.isEmpty) {
              return "username name can not be empty";
            }
            return null;
@@ -91,7 +91,7 @@ fontWeight: FontWeight.bold,
            labelText: "passward",
           ),
            validator:(value){
-           if (value!.isNotEmpty) {
+           if (value!.isEmpty) {
              return "passwrd can not be empty";
            } 
           else if (value.length<6){
