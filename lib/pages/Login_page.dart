@@ -69,13 +69,13 @@ fontWeight: FontWeight.bold,
        ),
 
        InkWell(
-         onTap: () {
+         onTap: () async {
            setState(() {
              changeButton= true;
            });
 
-          // await Future.delayed (Duration(seconds: 1));
-          // Navigator.pushNamed(context, MyRoutes.homeRoute) ;
+           await Future.delayed (Duration(seconds: 1));
+           Navigator.pushNamed(context, MyRoutes.homeRoute) ;
          },
        
        child: AnimatedContainer(
