@@ -67,8 +67,10 @@ fontWeight: FontWeight.bold,
         SizedBox( 
          height:40,
        ),
-
-       InkWell(
+        Material(
+          color:Colors.deepPurple,
+           borderRadius: BorderRadius.circular(changeButton ?50:8),
+           child:InkWell(
          onTap: () async {
            setState(() {
              changeButton= true;
@@ -94,13 +96,14 @@ fontWeight: FontWeight.bold,
            fontSize:18),
 
         ),
-        decoration: BoxDecoration(
-          color: Colors.deepPurple,
+       /* decoration: BoxDecoration(
+          color: Colors.deepPurple,*/
          // shape: changeButton?BoxShape.circle:BoxShape.rectangle,
-          borderRadius: BorderRadius.circular(changeButton ?50:8)
+         
         ),
         ),
        ),
+       
 
 
 
