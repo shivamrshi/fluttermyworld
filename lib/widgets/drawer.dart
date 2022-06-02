@@ -1,5 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_myapp/widgets/drawer.dart';
 class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -23,11 +24,85 @@ class MyDrawer extends StatelessWidget {
 
            )
          ),
-        /* ListTile(
+        
+         ListTile(
            leading: Icon(
-           //  CupertinoIcons.home,
-           )
-         )*/
+            CupertinoIcons.home,
+            color:Colors.white,
+           ),
+           title:Text(    
+             "Home",
+             textScaleFactor: 1.3,
+        style: TextStyle(
+          color:Colors.white,
+        ),  
+           ),
+         ),
+         ListTile(
+           leading: Icon(
+            CupertinoIcons.profile_circled,
+            color:Colors.white,
+           ),
+           title:Text(    
+             "Profile",
+             textScaleFactor: 1.3,
+        style: TextStyle(
+          color:Colors.white,
+        ),  
+           ),
+         ),
+          ListTile(
+           leading: Icon(
+            CupertinoIcons.list_bullet_below_rectangle,
+            color:Colors.white,
+           ),
+           title:Text(    
+             "List",
+             textScaleFactor: 1.3,
+        style: TextStyle(
+          color:Colors.white,
+        ),  
+           ),
+         ),
+          ListTile(
+           leading: Icon(
+            CupertinoIcons.settings_solid,
+            color:Colors.white,
+           ),
+           title:Text(    
+             "Setting",
+             textScaleFactor: 1.3,
+        style: TextStyle(
+          color:Colors.white,
+        ),  
+           ),
+         ),
+          ListTile(
+           leading: Icon(
+            CupertinoIcons.lock_shield_fill,
+            color:Colors.white,
+           ),
+           title:Text(    
+             "Login/SignUp",
+             textScaleFactor: 1.3,
+        style: TextStyle(
+          color:Colors.white,
+        ),  
+           ),
+         ),
+         ListTile(
+           leading: Icon(
+            CupertinoIcons.archivebox_fill,
+            color:Colors.white,
+           ),
+           title:Text(    
+             "About Us",
+             textScaleFactor: 1.3,
+        style: TextStyle(
+          color:Colors.white,
+        ),  
+           ),
+         ),
        ],
      ), 
       ),
