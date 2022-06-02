@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/drawer.dart';
+
 class HomePage extends StatelessWidget {
   final int days =1;
    final String world="gruko";
@@ -14,7 +16,7 @@ class HomePage extends StatelessWidget {
            child: Text(" this is my day $days in this planet $world"),
          ),
        ),
-      drawer:Drawer(),
+      drawer:MyDrawer(),
     );
   }
 }
