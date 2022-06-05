@@ -55,6 +55,8 @@ fontWeight: FontWeight.bold,
        ElevatedButton(
          child: Text("login"),
          style:TextButton.styleFrom(minimumSize: Size(140, 40)),
+     //  decoration:DecoratedBox(borderRadius:BorderRadius.circular(10), decoration: null,),
+        
          onPressed: ( ) {
         Navigator.pushNamed(context, MyRoutes.homeRoute) ;  
            },
