@@ -1,29 +1,20 @@
+/*import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_myapp/pages/share_app.dart';
+//import 'package:flutter_myapp/widgets/drawer.dart';
 
-//import '../widgets/drawer.dart';
+class MyDrawer extends StatefulWidget {
+  MyDrawer({Key? key}) : super(key: key);
 
-class HomePage extends StatelessWidget {
-  final int days =1;
-   final String world="gruko";
+  @override
+  State<MyDrawer> createState() => _MyDrawerState();
+}
+
+class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(
-       /* backgroundColor: Colors.white,
-        elevation: 0.0,
-        iconTheme: IconThemeData(color:Colors.black),*/
-        title:Text("Hello",
-        //style:TextStyle(color:Colors.black),
-        ),
-      ),
-      body:Center(
-         child:Container(
-           child: Text(" this is my day $days in this planet $world"),
-         ),
-       ),
-     // drawer:MyDrawer(),
-      //key: _scaffoldKey,
+        key: _scaffoldKey,
         drawer: Drawer(
           child: SingleChildScrollView(
               padding: const EdgeInsets.all(16.0),
@@ -33,14 +24,12 @@ class HomePage extends StatelessWidget {
                       children: 
                       [
                         const DrawerHeader(),
-                        const SizedBox(height: 16.0,),
-                        DrawerNavigationItem()
                       ]
                       )
                       )
                       ),
         )
-    );
+        );
   }
 }
 
@@ -63,11 +52,11 @@ NetworkImage("https://cdn4.iconfinder.com/data/icons/education-and-learning-25/2
         fontWeight:FontWeight.w400,
       ),
       )
+      
+      
+      
+      
       ]
       );
   }
-}
-
-
-class DrawerNavigationItem extends StatelessWidget 
-  
+}*/
