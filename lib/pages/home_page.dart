@@ -1,11 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_myapp/pages/share_app.dart';
+
+import '../widgets/drawer.dart';
 
 //import '../widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
-  final int days =1;
-   final String world="gruko";
+ // final String days =41;
+   //final String world="Rahul      Kumar";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,20 +16,24 @@ class HomePage extends StatelessWidget {
        /* backgroundColor: Colors.white,
         elevation: 0.0,
         iconTheme: IconThemeData(color:Colors.black),*/
-        title:Text("Hello",
+        title:Text("Hello! Gyus",style: TextStyle(
+         fontWeight: FontWeight.bold,fontSize: 20
+       ),
         //style:TextStyle(color:Colors.black),
         ),
       ),
       body:Center(
          child:Container(
-           child: Text(" this is my day $days in this planet $world"),
+           child: Text(" Information Technology ",style: TextStyle(
+         fontWeight: FontWeight.bold,fontSize: 25
+       ),),
          ),
        ),
      // drawer:MyDrawer(),
       //key: _scaffoldKey,
-        drawer: Drawer(
+        drawer: MyDrawer(/*
           child: SingleChildScrollView(
-              padding: const EdgeInsets.all(16.0),
+               
               child: SafeArea(
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,16 +41,31 @@ class HomePage extends StatelessWidget {
                       [
                         const DrawerHeader(),
                         const SizedBox(height: 16.0,),
-                        DrawerNavigationItem()
+                        DrawerNavigationItem(
+                        iconData:CupertinoIcons.home ,
+                        title: "Home",
+                        onTap: () {},
+                        selected:true,
+                        
+                        ),
+                        DrawerNavigationItem(
+                        iconData:Icons.CupertinoIcons.bell_circle_fill ,
+                        title: "Home",
+                        onTap: () {},
+                        selected:true,
+                        
+                        )
                       ]
+                     
                       )
                       )
-                      ),
+                      ),*/
         )
     );
   }
 }
 
+/*
 class DrawerHeader extends StatelessWidget {
   const DrawerHeader({Key? key}) : super(key: key);
 
@@ -69,5 +91,32 @@ NetworkImage("https://cdn4.iconfinder.com/data/icons/education-and-learning-25/2
 }
 
 
-class DrawerNavigationItem extends StatelessWidget 
-  
+class DrawerNavigationItem extends StatelessWidget { 
+    final CupertinoIcons iconData;
+    final String title;
+     final bool selected;
+     final Function() onTap;
+    const DrawerNavigationItem({
+      Key? key,
+      
+      required this.iconData,
+      required this.title,
+      required this.selected,
+      required this.onTap,
+    }): super(key: key);
+
+    @override
+  Widget build(BuildContext context) {
+    return ListTile(
+   shape: RoundedRectangleBorder(
+     borderRadius: BorderRadius.circular(30.0),
+   ),
+   leading:CupertinoIcons.  iconData,
+   onTap: onTap,
+   title: Text(title ),
+   selectedTileColor: Colors.lightBlueAccent.shade100,
+   selected: selected,
+   selectedColor: Colors.black87,
+    );
+  }
+}*/

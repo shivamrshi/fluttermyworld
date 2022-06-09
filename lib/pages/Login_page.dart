@@ -21,9 +21,9 @@ class _LoginPageState extends State<LoginPage> {
              changeButton= true;
            });
 
-           await Future.delayed (Duration(seconds: 1));
+           await Future.delayed (Duration(seconds: 0));
            await Navigator.pushNamed(
-             context, MyRoutes.homeRoute);
+             context, MyRoutes.mainpageRoute);
            //Navigator.pushNamed(context, MyRoutes.homeRoute) ;
            setState(() {
              changeButton= false;
@@ -43,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
 
       child:Column(
       children:[
-        Image.asset("assets/images/login_image.png",
+        Image.asset("assets/images/lg.png",
         fit:BoxFit.cover,
         height: 300,
             ),
@@ -106,7 +106,7 @@ fontWeight: FontWeight.bold,
          height:40,
        ),
         Material(
-          color:Colors.deepPurple,
+          color:Colors.cyanAccent,
            borderRadius: BorderRadius.circular(changeButton ?50:8),
            child:InkWell(
          onTap: () => moveToHome(context),
@@ -138,7 +138,7 @@ fontWeight: FontWeight.bold,
         : Text(
          "Login",
          style: TextStyle(
-           color:Colors.white,fontWeight: FontWeight.bold,
+           color:Colors.black87,fontWeight: FontWeight.bold,
            fontSize:18),
 
         ),

@@ -4,10 +4,10 @@ class MyTheme{
  // static  ThemeData get themeData=>
  static ThemeData lightTheme(BuildContext context)=>
 ThemeData(
-         primarySwatch: Colors.deepPurple ,
+         primarySwatch: Colors.cyan,
          fontFamily: GoogleFonts.lato().fontFamily,
          appBarTheme:AppBarTheme(
-         color:Colors.white,
+         color:Color.fromARGB(255,24, 255, 255),
          elevation: 0.0,
          iconTheme:IconThemeData(color: Colors.black), 
         toolbarTextStyle: Theme.of(context).textTheme.bodyText2,
