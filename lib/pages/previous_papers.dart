@@ -8,7 +8,7 @@ class previouspaper extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
        child:Center(
-       child:Text("Previous Paper",style: TextStyle(
+       child:Text("Previous Papers",style: TextStyle(
          fontWeight: FontWeight.bold,fontSize: 30
        ),
        )

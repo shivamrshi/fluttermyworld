@@ -7,20 +7,28 @@ class MyDrawer extends StatelessWidget {
     final imageUrl =
     "https://cdn4.iconfinder.com/data/icons/education-and-learning-25/256/Smart_learning-512.png";
     return Drawer(
-      child: Container(decoration: BoxDecoration(
+      
+      child: Container(
+        
+        decoration: BoxDecoration(
          color:Colors.white,
          borderRadius:BorderRadius.circular(20),
       
-      ),
+          ),
        
         
-     child:ListView(
+          child:ListView(
        padding: EdgeInsets.zero,
        children:[
          DrawerHeader(
+
+     
            padding: EdgeInsets.zero,
-           child:UserAccountsDrawerHeader(
+        //   child:Center(
+              child: UserAccountsDrawerHeader(
              margin: EdgeInsets.zero,
+
+             
              accountName:Text("Rahul Kumar"),
              decoration:BoxDecoration(
                color: Colors. cyanAccent     ,borderRadius: BorderRadius.circular(40),
@@ -33,8 +41,9 @@ class MyDrawer extends StatelessWidget {
              
              
              ) ,
-  
+        
            )
+           //)
        ),
         
          ListTile(
@@ -52,7 +61,7 @@ class MyDrawer extends StatelessWidget {
          ),
          ListTile(
            leading: Icon(
-            CupertinoIcons.bell_circle_fill,
+            CupertinoIcons.flame_fill,
             color:Colors.black,
            ),
            title:Text(    

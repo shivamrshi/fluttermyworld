@@ -6,6 +6,7 @@ import 'package:flutter_myapp/utils/routes.dart';
 import 'package:flutter_myapp/widgets/themes.dart';
 //import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
+import 'widgets/drawer.dart';
 
 void main()
 {
@@ -29,7 +30,8 @@ class yapp extends StatelessWidget {
         routes : {
           "/":(context)=>LoginPage(),
           MyRoutes.mainpageRoute:(context) => mainpage(),
-          MyRoutes.homeRoute:(context) => HomePage(),
+         MyRoutes. mydrawerRoute:(context) => MyDrawer(),
+         // MyRoutes.homeRoute:(context) => HomePage(),
           //MyRoutes.loginRoute:(context) => LoginPage(),
        },
     );
