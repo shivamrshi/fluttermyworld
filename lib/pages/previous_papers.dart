@@ -10,6 +10,10 @@ class previouspaper extends StatelessWidget {
        child:Center(
        child:Text("Previous Papers",style: TextStyle(
          fontWeight: FontWeight.bold,fontSize: 30
+
+
+
+         
        ),
        )
      )
