@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_myapp/pages/material.dart';
 import 'package:flutter_myapp/widgets/drawer.dart';
+
+import '../pages/aktu.dart';
+import '../utils/routes.dart';
 class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -40,7 +44,7 @@ class MyDrawer extends StatelessWidget {
           
              ),
              //)
-        
+      
           
            ListTile(
              leading: Icon(
@@ -54,6 +58,9 @@ class MyDrawer extends StatelessWidget {
             color:Colors.black,
           ),  
              ),
+            onTap: ( ) {
+          Navigator.pushNamed(context, MyRoutes.homeRoute) ;  
+             },
            ),
            ListTile(
              leading: Icon(
@@ -67,6 +74,10 @@ class MyDrawer extends StatelessWidget {
             color:Colors.black,
           ),  
              ),
+              onTap: ( ) {
+                //aktu();
+          Navigator.pushNamed(context, MyRoutes.trendingRoute) ;  
+             },
            ),
             ListTile(
              leading: Icon(
@@ -79,7 +90,11 @@ class MyDrawer extends StatelessWidget {
           style: TextStyle(
             color:Colors.black,//fontWeight: FontWeight.bold,fontStyle:FontStyle.italic,
           ),  
+          
              ),
+              onTap: ( ) {
+          Navigator.pushNamed(context, MyRoutes.materialRoute) ;  
+             },
              
            ),
             ListTile(
@@ -94,6 +109,9 @@ class MyDrawer extends StatelessWidget {
             color:Colors.black,
           ),  
              ),
+              onTap: ( ) {
+          Navigator.pushNamed(context, MyRoutes.trendingRoute) ;  
+             },
            ),
 
            ListTile(
@@ -108,6 +126,10 @@ class MyDrawer extends StatelessWidget {
             color:Colors.black,
           ),  
              ),
+              onTap: ( ) {
+          Navigator.pushNamed(context, MyRoutes.scholarRoute) ;  
+             },
+
            ),
             ListTile(
              leading: Icon(
@@ -121,6 +143,10 @@ class MyDrawer extends StatelessWidget {
             color:Colors.black,
           ),  
              ),
+              onTap: ( ) {
+          Navigator.pushNamed(context, MyRoutes.scholarRoute) ;  
+             },
+             
            ),
            ListTile(
              leading: Icon(
@@ -134,6 +160,9 @@ class MyDrawer extends StatelessWidget {
             color:Colors.black,
           ),  
              ),
+              onTap: ( ) {
+          Navigator.pushNamed(context, MyRoutes.scholarRoute) ;  
+             },
            ),
            ListTile(
              leading: Icon(
@@ -147,6 +176,9 @@ class MyDrawer extends StatelessWidget {
             color:Colors.black,
           ),  
              ),
+              onTap: ( ) {
+          Navigator.pushNamed(context, MyRoutes.scholarRoute) ;  
+             },
            ),
          
          ]

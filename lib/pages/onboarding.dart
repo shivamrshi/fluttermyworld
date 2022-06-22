@@ -103,12 +103,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Connect people\naround the world',
+                            // 'Get a new experience\nof imagination',
+                            'There is no friends as loyal as a book',
                               style: kTitleStyle,
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                              'Maybe this is why we read, and why in moments of darkness we return to books: to find words for what we already know.',
                               style: kSubtitleStyle,
                             ),
                           ],
@@ -135,7 +136,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                            
+                              'The imagination is an extremely powerful force. It has the power to create, to comfort, to ruin, and to destroy.',
                               style: kSubtitleStyle,
                             ),
                           ],
@@ -157,12 +159,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Get a new experience\nof imagination',
+                              'Saving money helps you meet your financial goals',
                               style: kTitleStyle,
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                              //'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                              'Money never made a man happy yet , nor will it . The more a man has , the more he wants .',
                               style: kSubtitleStyle,
                             ),
                           ],
