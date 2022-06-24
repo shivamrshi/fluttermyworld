@@ -76,7 +76,8 @@ class MyDrawer extends StatelessWidget {
              ),
               onTap: ( ) {
                 //aktu();
-          Navigator.pushNamed(context, MyRoutes.trendingRoute) ;  
+        Navigator.of(context).pushReplacement(CupertinoPageRoute(builder: (ctx)=> aktu()));
+         // Navigator.pushNamed(context, MyRoutes.trendingRoute) ;  
              },
            ),
             ListTile(
@@ -93,7 +94,8 @@ class MyDrawer extends StatelessWidget {
           
              ),
               onTap: ( ) {
-          Navigator.pushNamed(context, MyRoutes.materialRoute) ;  
+           Navigator.of(context).pushReplacement(CupertinoPageRoute(builder: (ctx)=> material()));   
+         // Navigator.pushNamed(context, MyRoutes.materialRoute) ;  
              },
              
            ),

@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:flutter_myapp/pages/Login_page.dart';
 import 'package:flutter_myapp/pages/aktu.dart';
@@ -11,7 +12,9 @@ import 'package:flutter_myapp/widgets/themes.dart';
 //import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
 import 'pages/onboarding.dart';
+import 'pages/splash.dart';
 import 'widgets/drawer.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 void main()
 {
@@ -31,22 +34,22 @@ class yapp extends StatelessWidget {
         // brightness: Brightness.dark,
         // ),
            debugShowCheckedModeBanner: false,
+          
         //initialRoute:MyRoutes.homeRoute,
         routes : {
-          "/":(context) => OnboardingScreen(),//(context)=>LoginPage(),
-           MyRoutes.loginRoute:(context) => LoginPage(),
+          "/":(context) => splashScreen(),
+          MyRoutes.onboardingRoute:(context) => OnboardingScreen(),//(context)=>LoginPage(),
+          MyRoutes.loginRoute:(context) => LoginPage(),
           MyRoutes.mainpageRoute:(context) => mainpage(),
-           MyRoutes.mydrawerRoute:(context) => MyDrawer(),
-           MyRoutes.homeRoute:(context) => HomePage(),
-            MyRoutes.trendingRoute:(context) => aktu(),
-       
-        
-         MyRoutes.materialRoute:(context) => material(),
+          MyRoutes.mydrawerRoute:(context) => MyDrawer(),
+          MyRoutes.homeRoute:(context) => HomePage(),
+          MyRoutes.trendingRoute:(context) => aktu(),  
+          MyRoutes.materialRoute:(context) => material(),
           MyRoutes.PreviouspapRoute:(context) =>previouspaper(),
           MyRoutes.scholarRoute:(context) =>scholarship(),
-           MyRoutes.settingRoute :(context) =>mainpage(),
-            MyRoutes.shareRoute :(context) =>scholarship(),
-             MyRoutes.aboutRoute:(context) =>scholarship(),
+          MyRoutes.settingRoute :(context) =>mainpage(),
+          MyRoutes.shareRoute :(context) =>scholarship(),
+          MyRoutes.aboutRoute:(context) =>scholarship(),
         
          
          // MyRoutes.homeRoute:(context) => HomePage(),
