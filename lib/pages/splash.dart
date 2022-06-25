@@ -17,7 +17,7 @@ class _splashScreenState extends State<splashScreen> {
 void initState(){
 super.initState();
 Future.delayed(Duration(seconds:3)).then((value){
-Navigator.pushNamed(context, MyRoutes.onboardingRoute) ;
+Navigator.pushNamed(context, MyRoutes.mainpageRoute) ;
 //Navigator.of(context).pushReplacement(CupertinoPageRoute(builder: (ctx)=> yapp()));
 });
 }
