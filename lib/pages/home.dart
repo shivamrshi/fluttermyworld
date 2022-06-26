@@ -1,3 +1,5 @@
+
+
 import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +17,7 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-   TabController _tabController = TabController(length:4,vsync: this);
+   TabController _tabController = TabController(length:3,vsync: this);
     return Scaffold(
        
         appBar: AppBar(
@@ -56,19 +58,21 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
         child: Align(
           alignment:Alignment.centerLeft,
           child: TabBar(
-            labelPadding: const EdgeInsets.only(left:20,right:20),
+            labelPadding: const EdgeInsets.only(left:20,right:15),
             controller:_tabController,
             unselectedLabelColor:Colors.grey,
-            labelColor:Colors.black ,
+            labelColor:Color.fromARGB(187, 13, 77, 5) ,
+            labelStyle:TextStyle(fontSize: 17,fontWeight: FontWeight.w500),
             isScrollable: true,
             indicatorSize: TabBarIndicatorSize.label,
-            indicator:CircleTabIndicator(color:Color.fromARGB(255, 252, 150, 150),radius: 5),
+            indicator:CircleTabIndicator(color:Color.fromARGB(187, 13, 77, 5),radius: 5),
             tabs: [
-             Tab(text:"Aktu"),
-             Tab(text:"JEE"),
+            Tab(text:"Recommendation"),
+            Tab(text:"Black Tea"),
              
-             Tab(text:"10th class"),
-             Tab(text:"12th class"),
+            Tab(text:"Green Tea"),
+            
+           
         
           ],
           ),
@@ -84,16 +88,32 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
                  
                     ListView.builder(
                       
-                      itemCount:3,
+                      itemCount:1,
                       scrollDirection:Axis.horizontal,
                       itemBuilder: (BuildContext context,int index)  {
                       return  InkWell(
                         onTap: () {
                           Navigator.pushNamed(context, MyRoutes.detailRoute) ;
                         },
-                        child: Container(
+                        child: Row(children: [
+                          Container(
                           margin:const EdgeInsets.only(right:15,top:10),
-                          height:150,
+                         // height:150,
+                          width: 130,
+                          
+                          decoration: BoxDecoration(
+                            borderRadius:BorderRadius.circular(20),
+                            color: Color.fromARGB(255, 190, 255, 130),
+                            image:DecorationImage(
+                              image:AssetImage("assets/images/lemon.png"),
+                              
+                             // fit: BoxFit.cover
+                            )
+                          ),
+                        ),
+                         Container(
+                          margin:const EdgeInsets.only(right:15,top:10),
+                         // height:150,
                           width: 130,
                           
                           decoration: BoxDecoration(
@@ -105,6 +125,21 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
                             )*/
                           ),
                         ),
+                         Container(
+                          margin:const EdgeInsets.only(right:15,top:10),
+                         // height:150,
+                          width: 130,
+                          
+                          decoration: BoxDecoration(
+                            borderRadius:BorderRadius.circular(20),
+                            color: Color.fromARGB(255, 190, 255, 130),
+                          /*  image:DecorationImage(
+                              image:AssetImage("assets/images/R.jpg"),
+                              fit: BoxFit.cover
+                            )*/
+                          ),
+                        ),
+                        ],)
                       );
                       }
                      
@@ -112,7 +147,7 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
                   
                   Text("hi"),
                   Text("hi"),
-                  Text("hi"),
+               
          
             ]
             ),
