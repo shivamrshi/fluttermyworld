@@ -1,7 +1,10 @@
 
 
+import 'dart:ui';
+
 import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/routes.dart';
@@ -50,12 +53,34 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            margin:const EdgeInsets.only(left:20,top:10),
-             child:Text("Discover",style: TextStyle(
-         fontWeight: FontWeight.bold,fontSize: 30
+            alignment: Alignment.center,
+            height:56,
+            width:350,
+            margin:const EdgeInsets.only(left:20,top:10 ,right: 20),
+            padding: EdgeInsets.only(left:24),
+       decoration: BoxDecoration(color:Color.fromARGB(99, 70, 77, 67),
+       borderRadius: BorderRadius.circular(20),
+      /* boxShadow: [BoxShadow(
+        offset: Offset(0, 10),
+        blurRadius: 50,
+        color:Colors.black.withOpacity(0.23),
+       ),],*/
+
        ),
-       )
+       
+       child: TextField(
+        decoration:InputDecoration(
+          hintText: "Search",hintStyle: TextStyle(color:Colors.black54
           ),
+          enabledBorder:InputBorder.none,
+            focusedBorder:InputBorder.none,    
+        ),
+       ),
+      
+          ),
+          
+          
+          
       SizedBox(height: 12,),
       //tabbar
       Container(
@@ -294,14 +319,14 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
            child: Text("Will Buy-->", 
            style:TextStyle(fontSize: 17,fontWeight: FontWeight.bold,color:Color.fromARGB(238, 84, 89, 83) )),
          ),
-          SizedBox(height:0),
+           SizedBox(height:20), 
         Column(
           children: [
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Container(
+               
+                    SizedBox(width:21),   // padding: const EdgeInsets.all(20.0),
+                   Container(
                      height:75,
                      width:75,
                       decoration: BoxDecoration(
@@ -323,8 +348,8 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
                   
                     ),
                   ),
-                ),
-                SizedBox(width:1),
+                
+                SizedBox(width:10),
               
          
             
@@ -338,7 +363,7 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
              ),
              ],
               ),
-            SizedBox(width:25),
+            SizedBox(width:30),
              Column(  children: [ 
                 Text("₹",//textAlign: TextAlign.start,
              style:TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color:Color.fromARGB(137, 84, 89, 83), )
@@ -355,14 +380,13 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
             )
           ],
         ),
-        
+         SizedBox(height:20), 
         Column(
           children: [
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Container(
+                 SizedBox(width:21), 
+                   Container(
                      height:75,
                      width:75,
                       decoration: BoxDecoration(
@@ -384,10 +408,10 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
                   
                     ),
                   ),
-                ),
+                
               
               
-         
+           SizedBox(width:10),
             
               Column(  children: [ 
                 Text("Purple Tea",
@@ -399,7 +423,7 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
              ),
              ],
               ),
-            SizedBox(width:25),
+            SizedBox(width:30),
              Column(  children: [ 
                 Text("₹",//textAlign: TextAlign.start,
              style:TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color:Color.fromARGB(137, 84, 89, 83), )
