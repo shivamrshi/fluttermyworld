@@ -12,7 +12,6 @@ import '../utils/routes.dart';
 import '../widgets/drawer.dart';
 import 'section_title.dart';
 
-
 //import '../widgets/drawer.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,12 +21,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   // final String days =41;
-var images={
-"ob0.png":"ob0",
-"ob1.png":"ob1",
-"ob2.png":"ob2",
-"ob11.png":"ob11",
-};
+  var images = {
+    "ob0.png": "ob0",
+    "ob1.png": "ob1",
+    "ob2.png": "ob2",
+    "ob11.png": "ob11",
+  };
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +46,7 @@ var images={
           title: Text(
             "Hello! Gyus",
             style: TextStyle(
-              fontWeight: FontWeight.bold,
+                   fontWeight: FontWeight.bold,
               fontSize: 20,
             ),
             //style:TextStyle(color:Colors.black),
@@ -57,63 +56,59 @@ var images={
           slivers: [
             SliverPadding(
               padding: EdgeInsets.symmetric(horizontal: 16),
-              sliver: SliverToBoxAdapter(child: imagecarosel()
-              ),
+              sliver: SliverToBoxAdapter(child: imagecarosel()),
             ),
             SliverPadding(
-              padding: EdgeInsets.only(left: 13,top: 10),
+              padding: EdgeInsets.only(left: 13, top: 10),
               sliver: SliverToBoxAdapter(
                 child: sectiontitle(
-                  title:"Top",
-                  press:(){},
+                  title: "Top Item",
+                  press: () {},
                 ),
               ),
             ),
-         SliverToBoxAdapter(
-           child: Container(
-              height:110,
-              width:double.maxFinite,
-              margin: const EdgeInsets.only(left:20),
-              child: ListView.builder(
-                itemCount: 4,
-                scrollDirection: Axis.horizontal,
-                itemBuilder:(_,index){
-                return Container(
-                  margin: const EdgeInsets.only(right:25),
-                  child: Column(
-                    crossAxisAlignment:CrossAxisAlignment.center,
-                    children: [
-                         Container(
-                           // margin:const EdgeInsets.only(right:50),
-                            height:80,
-                            width: 80,
-                            decoration: BoxDecoration(
-                              borderRadius:BorderRadius.circular(20),
-                              color: Colors.white,
-                              image:DecorationImage(
-                                image:AssetImage("img/"+images.keys.elementAt(index)),
-                                fit: BoxFit.cover
-                              )
-                            ),
+            SliverToBoxAdapter(
+              child: Container(
+                  height: 110,
+                  width: double.maxFinite,
+                  margin: const EdgeInsets.only(left: 20),
+                  child: ListView.builder(
+                      itemCount: 4,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (_, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(right: 25),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                // margin:const EdgeInsets.only(right:50),
+                                height: 80,
+                                width: 80,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.white,
+                                    image: DecorationImage(
+                                        image: AssetImage("img/" +
+                                            images.keys.elementAt(index)),
+                                        fit: BoxFit.cover)),
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Container(
+                                  child: Text(
+                                images.values.elementAt(index),
+                              ))
+                            ],
                           ),
-                          SizedBox(height: 8,),
-                          Container(
-                            child:Text(images.values.elementAt(index),
-                            )
-                          )
-                  ],
-                  ),
-                );
-              }
-              )
-            ),
-         )
+                        );
+                      })),
+            )
           ],
-        )
-        );
+        ));
   }
 }
-
 
 class dddd extends StatelessWidget {
   const dddd({Key? key}) : super(key: key);
