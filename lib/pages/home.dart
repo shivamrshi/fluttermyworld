@@ -14,7 +14,11 @@ class aktu extends StatefulWidget {
 }
 
 class _aktuState extends State<aktu> with TickerProviderStateMixin {
-
+  var images ={
+    "Lemon_Tea.png":"Lemon Tea",
+    "Black_Tea.png":"Black Tea",
+    "Green_Tea.png":"Green Tea",
+  };
   @override
   Widget build(BuildContext context) {
    TabController _tabController = TabController(length:3,vsync: this);
@@ -78,15 +82,62 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
           ),
         ),
       ),
+      SizedBox( height: 10,  ),
          Container(
-          padding:const EdgeInsets.only(left:20),
+          padding:const EdgeInsets.only(left:15),
           height: 220,
           width:double.maxFinite ,
           child: TabBarView(
             controller:_tabController,
             children: [
                  
-                    ListView.builder(
+                  
+                   Container(
+                    height: 110,
+                    width: double.maxFinite,
+                    margin: const EdgeInsets.only(left:8),
+                    child: ListView.builder(
+                        itemCount: 3,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (_, index) {
+                          return InkWell(
+                            onTap: () {
+                          Navigator.pushNamed(context, MyRoutes.detailRoute) ;
+                        },
+                            child: Container(
+                            
+                              margin: const EdgeInsets.only(right: 25),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    // margin:const EdgeInsets.only(right:50),
+                                    height: 180,
+                                    width: 130,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: Color.fromARGB(255, 190, 255, 130),
+                                        image: DecorationImage(
+                                            image: AssetImage("img/" +
+                                                images.keys.elementAt(index)),
+                                           // fit: BoxFit.cover
+                                            )),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                      child: Text(
+                                    images.values.elementAt(index),
+                                    style:TextStyle(fontSize: 17,fontWeight: FontWeight.bold,color:Color.fromARGB(187, 13, 77, 5) ),
+                                  ))
+                                ],
+                              ),
+                            ),
+                          );
+                        })),
+                 
+                   /* ListView.builder(
                       
                       itemCount:1,
                       scrollDirection:Axis.horizontal,
@@ -142,10 +193,51 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
                         ],)
                       );
                       }
-                     
-                    ),
-                  
-                  Text("hi"),
+                                         ),*/
+                   Container(
+                    height: 110,
+                    width: double.maxFinite,
+                    margin: const EdgeInsets.only(left:8),
+                    child: ListView.builder(
+                        itemCount: 3,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (_, index) {
+                          return InkWell(
+                            onTap: () {
+                          Navigator.pushNamed(context, MyRoutes.detailRoute) ;
+                        },
+                            child: Container(
+                            
+                              margin: const EdgeInsets.only(right: 25),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    // margin:const EdgeInsets.only(right:50),
+                                    height: 180,
+                                    width: 130,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: Color.fromARGB(255, 190, 255, 130),
+                                        image: DecorationImage(
+                                            image: AssetImage("img/" +
+                                                images.keys.elementAt(index)),
+                                           // fit: BoxFit.cover
+                                            )),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                      child: Text(
+                                    images.values.elementAt(index),
+                                    style:TextStyle(fontSize: 17,fontWeight: FontWeight.bold,color:Color.fromARGB(187, 13, 77, 5) ),
+                                  ))
+                                ],
+                              ),
+                            ),
+                          );
+                        })),    
                   Text("hi"),
                
          
@@ -166,7 +258,7 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
   CircleTabIndicator({required this.color,required this .radius});
   @override
   BoxPainter createBoxPainter([VoidCallback? onChanged]) {
-    // TODO: implement createBoxPainter
+    
      return _circlepainter(color:color, radius:radius);
   }
   

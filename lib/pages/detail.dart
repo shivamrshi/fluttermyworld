@@ -222,7 +222,7 @@ class _detailState extends State<detail> {
                 top: 130,
                 child: Column(children: [
                   Image.asset(
-                    "assets/images/lemon.png",
+                    "assets/images/Lemon_Tea.png",
                     height: 300,
                   ),
                 ])),
