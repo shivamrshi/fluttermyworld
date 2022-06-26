@@ -58,8 +58,8 @@ class _aktuState extends State<aktu> with TickerProviderStateMixin {
             width:350,
             margin:const EdgeInsets.only(left:20,top:10 ,right: 20),
             padding: EdgeInsets.only(left:24),
-       decoration: BoxDecoration(color:Color.fromARGB(99, 70, 77, 67),
-       borderRadius: BorderRadius.circular(20),
+       decoration: BoxDecoration(color:Color.fromARGB(27, 70, 77, 67),
+       borderRadius: BorderRadius.circular(30),
       /* boxShadow: [BoxShadow(
         offset: Offset(0, 10),
         blurRadius: 50,

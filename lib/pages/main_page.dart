@@ -53,9 +53,9 @@ class _mainpageState extends State<mainpage> {
         
         items: [
        
-        BottomNavigationBarItem(label:("Trending"),icon: Icon( CupertinoIcons.flame_fill)),
-        BottomNavigationBarItem(label:("Material"),icon: Icon( CupertinoIcons.square_pencil_fill )),
-        BottomNavigationBarItem(label:("Papers"),icon: Icon( CupertinoIcons.book_solid )),
+        BottomNavigationBarItem(label:("Trending"),icon: Icon( CupertinoIcons.house_fill),),
+        BottomNavigationBarItem(label:("Material"),icon: Icon( CupertinoIcons.cart_fill )),
+        BottomNavigationBarItem(label:("heart"),icon: Icon( CupertinoIcons.suit_heart_fill )),
        
 
         ]
