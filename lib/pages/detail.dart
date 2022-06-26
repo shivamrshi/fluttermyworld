@@ -1,6 +1,6 @@
 
 import 'dart:ui';
-
+import '../utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class detail extends StatefulWidget {
@@ -38,7 +38,7 @@ class _detailState extends State<detail> {
                 child: Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () { Navigator.pushNamed(context, MyRoutes.mainpageRoute);},
                       icon: Icon(Icons.arrow_back_ios_new),
                       color: Colors.white,
                     ),
@@ -233,20 +233,3 @@ class _detailState extends State<detail> {
   }
 }
 
-/*Wrap(
-                    children:List.generate(3, (index) {
-                       return Container(
-                        
-                        margin: EdgeInsets.only(left:4,right:20),
-                        width:60,
-                        height:60,
-                        child: Center(child: Text("500 ml")),
-                        decoration:BoxDecoration(
-                          borderRadius:BorderRadius.circular(20),
-                          color:Color.fromARGB(255, 190, 255, 130),
-                         )
-                       );
-
-                    })
-
-                   )*/
