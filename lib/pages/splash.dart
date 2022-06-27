@@ -32,7 +32,7 @@ Future.delayed(Duration(seconds:3)).then((value){
         width: double.infinity,
         child:Column(
           mainAxisAlignment: MainAxisAlignment.center,
-         children:[Image(image:AssetImage("assets/images/aaaaaa.png"),
+         children:[Image(image:AssetImage("assets/images/sp.png"),
          width:300,),
          SizedBox(
           height:50,
