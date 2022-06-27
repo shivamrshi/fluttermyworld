@@ -1,6 +1,7 @@
 import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_myapp/pages/detail.dart';
 
 import 'package:flutter_myapp/pages/shoping_cart.dart';
 
@@ -21,7 +22,7 @@ class _mainpageState extends State<mainpage> {
     
      aktu(),
     material(),
-    previouspaper(),
+    detail(),
    
 
   ];

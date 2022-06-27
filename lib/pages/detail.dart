@@ -206,7 +206,7 @@ class _detailState extends State<detail> {
                         child: Center(child: Text("Purchase",style:TextStyle(fontWeight: FontWeight.bold,color:Colors.white,fontSize: 24))),
                         decoration:BoxDecoration(
                           borderRadius:BorderRadius.circular(30),
-                          color:Color.fromARGB(255, 142, 251, 40),
+                          color:Color.fromARGB(201, 39, 97, 22),
                          )
                     ),
 
