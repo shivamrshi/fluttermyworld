@@ -15,7 +15,7 @@ class _detailState extends State<detail> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        width: double.maxFinite,
+         width: double.maxFinite,
         height: double.maxFinite,
         child: Stack(
           children: [
